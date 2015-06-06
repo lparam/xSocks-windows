@@ -1,6 +1,6 @@
 Xsocks for Windows
 =======================
-A Xsocks client for Windows
+A [xsocks](https://github.com/lparam/xsocks) client for Windows
 
 #### Features
 
