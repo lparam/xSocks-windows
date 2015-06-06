@@ -1,0 +1,6 @@
+Backup/
+bin/
+obj/
+TestResults
+*.suo
+

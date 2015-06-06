@@ -1,0 +1,8 @@
+proxyAddress = "__POLIPO_BIND_IP__"
+proxyPort = __POLIPO_BIND_PORT__
+
+socksParentProxy = "127.0.0.1:__SOCKS_PORT__"
+socksProxyType = socks5
+
+allowedPorts = 1-65535
+tunnelAllowedPorts = 1-65535
