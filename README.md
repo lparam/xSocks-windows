@@ -24,7 +24,6 @@ with any editor, Xsocks will notify browsers about the change automatically
 6. You can also update the PAC file from GFWList. Note your modifications to the PAC
 file will be lost. However you can put your rules in the user rule file for GFWList.
 Don't forget to update from GFWList again after you've edited the user rule
-7. Your system may need [Visual C++ Redistributable Packages](https://www.microsoft.com/en-US/download/details.aspx?id=40784)
 
 ### Develop
 

@@ -108,16 +108,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Resources\proxy.pac.txt.gz" />
+    <None Include="Resources\xsocks.exe.gz" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
     <None Include="Resources\abp.js.gz" />
-    <None Include="Resources\pac.txt.gz" />
     <None Include="Resources\polipo.exe.gz" />
-    <None Include="Resources\proxy.pac.txt.gz" />
-    <None Include="Resources\xsocks.exe.gz" />
     <None Include="Resources\polipo_config.txt" />
     <None Include="Resources\user-rule.txt" />
     <Compile Include="Util\Util.cs" />
