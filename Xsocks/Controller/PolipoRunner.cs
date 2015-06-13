@@ -50,16 +50,18 @@ namespace Xsocks.Controller
                 polipoConfig = polipoConfig.Replace("__POLIPO_BIND_IP__", config.ShareOverLan ? "0.0.0.0" : "127.0.0.1");
                 FileManager.ByteArrayToFile(Temppath + "/polipo.conf", Encoding.UTF8.GetBytes(polipoConfig));
 
-                Process = new Process();
-                // Configure the process using the StartInfo properties.
-                Process.StartInfo.FileName = Temppath + "/xs_polipo.exe";
-                Process.StartInfo.Arguments = "-c \"" + Temppath + "/polipo.conf\"";
-                //Process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                Process.StartInfo.UseShellExecute = false;
-                Process.StartInfo.CreateNoWindow = true;
-                Process.StartInfo.RedirectStandardOutput = true;
-                Process.StartInfo.RedirectStandardError = true;
-                //Process.EnableRaisingEvents = true;
+                Process = new Process
+                {
+                    StartInfo =
+                    {
+                        FileName = Temppath + "/xs_polipo.exe",
+                        Arguments = "-c \"" + Temppath + "/polipo.conf\"",
+                        UseShellExecute = false,
+                        CreateNoWindow = true,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true
+                    }
+                };
                 Process.OutputDataReceived += Process_LogDataReceived;
                 Process.ErrorDataReceived += Process_LogDataReceived;
                 Process.Start();

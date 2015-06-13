@@ -48,26 +48,22 @@ namespace Xsocks.Controller
                 config.Socks5ProxyPort = RunningPort = GetFreePort(config.Socks5ProxyPort);
                 Server server = config.GetCurrentServer();
 
-                string arguments = string.Format("-s {0}:{1} -k {2} -l {3}:{4} -n -V", 
+                var arguments = string.Format("-s {0}:{1} -k {2} -l {3}:{4} -t 300 -n", 
                     server.Host, server.Port, server.Password,
                     config.ShareOverLan ? "0.0.0.0" : "127.0.0.1",
                     RunningPort);
 
-                Process = new Process();
-                // Configure the process using the StartInfo properties.
-                Process.StartInfo.FileName = Temppath + "/xsocks.exe";
-                Process.StartInfo.Arguments = arguments;
-                //_process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                Process.StartInfo.UseShellExecute = false;
-                Process.StartInfo.CreateNoWindow = true;
-                Process.StartInfo.RedirectStandardOutput = true;
-                Process.StartInfo.RedirectStandardError = true;
-                //Process.EnableRaisingEvents = true;
-                Process.OutputDataReceived += Process_LogDataReceived;
-                Process.ErrorDataReceived += Process_LogDataReceived;
+                Process = new Process
+                {
+                    StartInfo =
+                    {
+                        FileName = Temppath + "/xsocks.exe",
+                        Arguments = arguments,
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    }
+                };
                 Process.Start();
-                Process.BeginOutputReadLine();
-                Process.BeginErrorReadLine();
             }
         }
 
