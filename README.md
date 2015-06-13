@@ -9,6 +9,8 @@ A [xsocks](https://github.com/lparam/xsocks) client for Windows
 3. PAC mode and global mode
 4. GFWList and user rules
 5. Supports HTTP proxy
+6. Supports Socks5 proxy
+7. Supports UDP relay
 
 #### Usage
 
