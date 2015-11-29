@@ -1,6 +1,6 @@
-Xsocks for Windows
+xSocks for Windows
 =======================
-A [xsocks](https://github.com/lparam/xsocks) client for Windows
+A [xSocks](https://github.com/lparam/xSocks) client for Windows
 
 #### Features
 
@@ -14,7 +14,7 @@ A [xsocks](https://github.com/lparam/xsocks) client for Windows
 
 #### Usage
 
-1. Find Xsocks icon in the notification tray
+1. Find xSocks icon in the notification tray
 2. You can add multiple servers in servers menu
 3. Select Enable System Proxy menu to enable system proxy. Please disable other
 proxy addons in your browser, or set them to use system proxy
@@ -22,7 +22,7 @@ proxy addons in your browser, or set them to use system proxy
 system proxy. Set Socks5 or HTTP proxy to address of tray icon tips. You can change this
 port in Server -> Edit Servers
 5. You can change PAC rules by editing the PAC file. When you save the PAC file
-with any editor, Xsocks will notify browsers about the change automatically
+with any editor, xSocks will notify browsers about the change automatically
 6. You can also update the PAC file from GFWList. Note your modifications to the PAC
 file will be lost. However you can put your rules in the user rule file for GFWList.
 Don't forget to update from GFWList again after you've edited the user rule
